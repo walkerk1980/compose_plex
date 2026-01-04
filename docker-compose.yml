@@ -13,6 +13,7 @@ services:
       - PLEX_CLAIM=$PLEX_CLAIM
     volumes:
       - config:/config
+      - transcode:/transcode
       - /mnt/14TB/Movies:/Movies
       - /mnt/14TB/TV:/TV
     restart: unless-stopped
@@ -20,4 +21,5 @@ services:
       - /dev/dri:/dev/dri
 volumes:
   config:
+  transcode:
 
